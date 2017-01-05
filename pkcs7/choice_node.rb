@@ -16,7 +16,7 @@ class ChoiceNode < Node
         choices = self.class::CHOICE
         raise "Missing CHOICE object in #{self.class}" unless choices
         choices.each do |choice|
-            tag = eval "#{choice.class_name}::TAG"
+            tag = eval "#{choice.class_name}.new.tag"
             @choices[tag] = {class_name: choice.class_name, name: choice.name, parameters: choice.options}
         end
     end

@@ -7,7 +7,7 @@ class AlgorithmIdentifier < Sequence
 
     CHILDREN = [
         Child.new('algorithm', 'OIDNode'),
-        Child.new('parameters', 'AnyNode', optional: true),
+        Child.new('parameters', 'NullNode', optional: true),
         Child.new('algorithmParameters', 'Algorithm', optional: true),
         Child.new('undefined', 'AnyNode', optional: true)
     ]

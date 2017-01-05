@@ -1,6 +1,6 @@
-require_relative 'set_of'
+require_relative 'sequence_of'
 
-class CertificateSet < SetOf
+class CertificateSet < SequenceOf
 
     # CHILD = Child.new 'signedCertificate', 'CertificateChoice'
     CHILD = Child.new 'signedCertificate', 'SignedCertificate'

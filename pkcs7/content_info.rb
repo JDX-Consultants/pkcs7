@@ -19,7 +19,7 @@ class ContentInfo < Sequence
     end
 
     def <<(object)
-        object_tag = eval("#{object.class}::TAG")
+        object_tag = eval("#{object.class}.new.tag")
         @identifier = object if :U6 == object_tag
         super(object)
     end

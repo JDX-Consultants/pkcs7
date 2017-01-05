@@ -1,6 +1,6 @@
-require_relative 'set_of'
+require_relative 'sequence_of'
 
-class Extensions < SetOf
+class Extensions < SequenceOf
 
     CHILD = Child.new 'extension', 'Extension'
 

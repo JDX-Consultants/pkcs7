@@ -17,7 +17,7 @@ class PKCS7Builder
         root_asn = OpenSSL::ASN1.decode(der)
         puts "ROOT TAG: #{tag root_asn}"
         content_info = ContentInfo.new
-        content_info.name = 'PKCS7'
+        content_info.name = 'contentInfo'
         @root << content_info
         parse_element root_asn, content_info
     end
@@ -28,7 +28,7 @@ class PKCS7Builder
                 # puts "\nStart parsing element using #{parent.class}"
                 asn_element.value.each do |asn_child_element|
                     tag = tag(asn_child_element)
-                    # puts "Parsing tag '#{tag}' in object #{parent}"
+                    # puts "\nParsing tag '#{tag}' in object #{parent}"
                     new_node = parent.instance_for_tag(tag)
                     raise "Could not create node in #{parent.class} for tag #{tag}" unless new_node
                     parent << new_node

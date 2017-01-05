@@ -11,7 +11,7 @@ class ArrayNode < Node
         if @child.match? tag
             @child.create_child
         else
-            raise "Invalid tag '#{tag} for class #{self.class}, expecting '#{self.class::TAG}' for name #{self.name}"
+            raise "Invalid tag '#{tag} for class #{self.class}, expecting '#{self.tag}' for name #{self.name}"
         end
     end
 

@@ -7,14 +7,16 @@ class Node
         object.level = @level+ 1
         # puts "Adding '#{object.class}' to node '#{self.class}', name: #{object.name}"
         puts
-        object_tag = eval("#{object.class}::TAG")
+        object_tag = object.tag
         printf "#{''.ljust(@level * 2)}#{object.name} (#{object_tag}):"
         raise "Invalid object, expecing a node and received a '#{object.class}' with content #{object.inspect}" unless object.is_a? Node
-        @instances ||= []
+        @instances ||= [] # Lazy instantiation (and no need for initializer), as some objects are leaves
         @instances << object
     end
 
-    def self.tag
+
+    # This class is defined to allow for overwritting
+    def tag 
         eval "#{self.class}::TAG"
     end
 

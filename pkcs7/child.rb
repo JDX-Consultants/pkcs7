@@ -12,7 +12,7 @@ class Child
     def tag
         return  "C#{(@options[:context_specific].to_s).to_sym}" if @options[:context_specific]
         begin
-            eval "#{@class_name}.tag"
+            eval "#{@class_name}.new.tag"
         rescue => e
             raise "Could not get tag from #{@class_name}: #{e.message}"
         end
@@ -40,20 +40,7 @@ class Child
     end
 
     def create_child
-        if @options[:context_specific]  and not @options[:implicit] # Create artificial class, and append
-            # begin
-            #     class_name = "#{@class_name}#{tag.to_s}_#{@@count}"
-            #     @@count += 1
-            #     tag_value = eval "#{@class_name}::TAG"
-            #     class_string = "#{class_name} = Class.new(#{@class_name}) do\n  TAG = :#{tag_value}\n  def instance_for_tag(tag)\n    eval \"#{@class_name}.new\"\n  end\nend"
-            #     eval class_string
-            #     new_node = eval "#{class_name}.new"
-            #     new_node.name = "#{@name} (explicit)"
-            #     new_node
-            # rescue => e
-            #     raise "Error while creating inner class '#{class_name}' : #{e.message.strip} for content:\n#{class_string}"
-            # end
-            # puts "explicit context_specific tag found for child #{self.inspect}"
+        if @options[:context_specific]  and not @options[:implicit] # Create artificial class, for 'skipping' a level
             return ContextSpecificNode.new(self)
         else # Normal case
             begin
@@ -75,16 +62,8 @@ class Child
         input_tag.to_s == child_tag.to_s
     end
 
-
-    #Ongoing work TO DO
-    def explicit_class(name, class_name, tag)
-        Class.new do
-            define_method(:instance_for_tag) do |name, class_name|
-                node = eval "#{class_name}.new"
-                node.name = name
-            end
-
-        end
+    def to_s
+        "#{name}: #{class_name}#{@options.size > 0 ? (', ' + @options.inspect) : ''}, tag: #{tag}"
     end
 
 
