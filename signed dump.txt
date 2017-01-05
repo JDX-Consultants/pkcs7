@@ -1,0 +1,168 @@
+SEQUENCE (U16):
+  OID (U16/U6): pkcs7-signedData
+  CONTEXT_SPECIFIC [0] (C0):
+    SEQUENCE (U16):
+      INT (U16/C0/U16/U2): 1
+      SET (U17):
+        SEQUENCE (U16):
+          OID (U16/C0/U16/U17/U16/U6): SHA256
+          NULL
+      SEQUENCE (U16):
+        OID (U16/C0/U16/U16/U6): pkcs7-data
+        CONTEXT_SPECIFIC [0] (C0):
+          HEX (U16/C0/U16/U16/C0/U4): 024eff0f7c3a2b29439915d74e1d2fcc93ba0f71
+      CONTEXT_SPECIFIC [0] (C0):
+        SEQUENCE (U16):
+          SEQUENCE (U16):
+            CONTEXT_SPECIFIC [0] (C0):
+              INT (U16/C0/U16/C0/U16/U16/C0/U2): 2
+            INT (U16/C0/U16/C0/U16/U16/U2): 16616870346450866874
+            SEQUENCE (U16):
+              OID (U16/C0/U16/C0/U16/U16/U16/U6): RSA-SHA1
+              NULL
+            SEQUENCE (U16):
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): C
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): BE
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): ST
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): L
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): O
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): I.R.I.S.
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): CN
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Didier de Ghellinck, Scrum Master
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): emailAddress
+                  MAIL (U16/C0/U16/C0/U16/U16/U16/U17/U16/U22): didier.de.ghellinck@iriscorporate.com
+            SEQUENCE (U16):
+              DATE (U16/C0/U16/C0/U16/U16/U16/U23): 2016-12-14 16:31:19 UTC
+              DATE (U16/C0/U16/C0/U16/U16/U16/U23): 2017-12-14 16:31:19 UTC
+            SEQUENCE (U16):
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): C
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): BE
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): ST
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): L
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): O
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): I.R.I.S.
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): CN
+                  STRING (U16/C0/U16/C0/U16/U16/U16/U17/U16/U19): Didier de Ghellinck, Scrum Master
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/U16/U17/U16/U6): emailAddress
+                  MAIL (U16/C0/U16/C0/U16/U16/U16/U17/U16/U22): didier.de.ghellinck@iriscorporate.com
+            SEQUENCE (U16):
+              SEQUENCE (U16):
+                OID (U16/C0/U16/C0/U16/U16/U16/U16/U6): rsaEncryption
+                NULL
+              BITS (U16/C0/U16/C0/U16/U16/U16/U3): ["3"]
+            CONTEXT_SPECIFIC [3] (C3):
+              SEQUENCE (U16):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/C3/U16/U16/U6): subjectKeyIdentifier
+                  HEX (U16/C0/U16/C0/U16/U16/C3/U16/U16/U4): 0414307c523c2183066faab7f2eda555ad31959531b3
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/C3/U16/U16/U6): authorityKeyIdentifier
+                  HEX (U16/C0/U16/C0/U16/U16/C3/U16/U16/U4): 3081e28014307c523c2183066faab7f2eda555ad31959531b3a181bea481bb3081b8310b300906035504061302424531193017060355040813104c6f757661696e2d4c612d4e6575766531193017060355040713104c6f757661696e2d4c612d4e657576653111300f060355040a1308492e522e492e532e312a302806035504031321446964696572206465204768656c6c696e636b2c20536372756d204d61737465723134303206092a864886f70d01090116256469646965722e64652e6768656c6c696e636b4069726973636f72706f726174652e636f6d820900e69afb8a46ed12ba
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/C0/U16/U16/C3/U16/U16/U6): basicConstraints
+                  HEX (U16/C0/U16/C0/U16/U16/C3/U16/U16/U4): 30030101ff
+          SEQUENCE (U16):
+            OID (U16/C0/U16/C0/U16/U16/U6): RSA-SHA1
+            NULL
+          BITS (U16/C0/U16/C0/U16/U3): ["b"]
+      SET (U17):
+        SEQUENCE (U16):
+          INT (U16/C0/U16/U17/U16/U2): 1
+          SEQUENCE (U16):
+            SEQUENCE (U16):
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): C
+                  STRING (U16/C0/U16/U17/U16/U16/U16/U17/U16/U19): BE
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): ST
+                  STRING (U16/C0/U16/U17/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): L
+                  STRING (U16/C0/U16/U17/U16/U16/U16/U17/U16/U19): Louvain-La-Neuve
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): O
+                  STRING (U16/C0/U16/U17/U16/U16/U16/U17/U16/U19): I.R.I.S.
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): CN
+                  STRING (U16/C0/U16/U17/U16/U16/U16/U17/U16/U19): Didier de Ghellinck, Scrum Master
+              SET (U17):
+                SEQUENCE (U16):
+                  OID (U16/C0/U16/U17/U16/U16/U16/U17/U16/U6): emailAddress
+                  MAIL (U16/C0/U16/U17/U16/U16/U16/U17/U16/U22): didier.de.ghellinck@iriscorporate.com
+            INT (U16/C0/U16/U17/U16/U16/U2): 16616870346450866874
+          SEQUENCE (U16):
+            OID (U16/C0/U16/U17/U16/U16/U6): SHA256
+            NULL
+          CONTEXT_SPECIFIC [0] (C0):
+            SEQUENCE (U16):
+              OID (U16/C0/U16/U17/U16/C0/U16/U6): contentType
+              SET (U17):
+                OID (U16/C0/U16/U17/U16/C0/U16/U17/U6): pkcs7-data
+            SEQUENCE (U16):
+              OID (U16/C0/U16/U17/U16/C0/U16/U6): signingTime
+              SET (U17):
+                DATE (U16/C0/U16/U17/U16/C0/U16/U17/U23): 2016-12-22 10:50:57 UTC
+            SEQUENCE (U16):
+              OID (U16/C0/U16/U17/U16/C0/U16/U6): messageDigest
+              SET (U17):
+                HEX (U16/C0/U16/U17/U16/C0/U16/U17/U4): bc2de93d7a3760ed01935209f04d53633997110d24bf08c574d2443227613fa7
+            SEQUENCE (U16):
+              OID (U16/C0/U16/U17/U16/C0/U16/U6): SMIME-CAPS
+              SET (U17):
+                SEQUENCE (U16):
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): AES-256-CBC
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): AES-192-CBC
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): AES-128-CBC
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): DES-EDE3-CBC
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): RC2-CBC
+                    INT (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U2): 128
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): RC2-CBC
+                    INT (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U2): 64
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): DES-CBC
+                  SEQUENCE (U16):
+                    OID (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U6): RC2-CBC
+                    INT (U16/C0/U16/U17/U16/C0/U16/U17/U16/U16/U2): 40
+          SEQUENCE (U16):
+            OID (U16/C0/U16/U17/U16/U16/U6): rsaEncryption
+            NULL
+          HEX (U16/C0/U16/U17/U16/U4): c142104e5984a94de17a7403a1f88ff5d61d65f63d34389ec570a1af1de2ac543a1971dbea410657761570ddea02ab182938540190cd877fe460d8d14c8b94c99ff7eaaab393312e2c6177149b6cc1a806b2fdc73dcc8561028009b178f98d08bbd987e7973c9b7a269e3cb206b304479cf4af488fc993e6809490e77ba7b37dddaf36a728e99744d4dfdca97e9ab475e081f739992b868b12d49336f7f57f0db2163db8aaaf8954cc2a9a26c7b082eefb4ad1fc8272e6b6f47469ec3468d8411008de36b4641c79d379e1ac1c2efe38bdae51b29fc1855e27436f7d3af28d252ed975655e2f8075679d85f2721effa60fc5f3d9af6fb647979e9c7dba16b95cc68eb4b28a89f7e0f140e976ede331b8989e7e0b68da3e86faad202b9c503ffa8ed4dca0ea8f1a26a61d459a0f54a50ec1479ff0cd60d9398741cfab4959cfa986eb5da6a3be26afe0f7783cee2fd33b59329b39161f0cf0cae326b762abc4937c1161a92ad90f9a36b2e6dfbe49479b746eefde0725f100e4aa751b83e5d641ec21254f05bff34cc2c285097217acb7158f9c0001c465dab02d506baefdc1f84d87e112c5cd6214375111a5ddaed3ebde76b6227ef38c172853eba6049fbf8112983007597c3e7b53d12d07e0d0e0081a5b4367b4319c534c93a4bec9ba814729ff82b99ce8eb1f342dbebee505cda8017b0b74139a46b48306adec4a9bc2e5
