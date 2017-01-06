@@ -31,9 +31,9 @@ class Child
 
     def match?(input_tag)
         child_tag = tag
-        if input_tag.is_a? Array
-            input_tag.each { |tag| return true if single_match? tag, child_tag }
-            return false
+        if child_tag.is_a? Array
+            child_tag.each { |tag| return true if single_match? tag, input_tag }
+            false
         else
             single_match? child_tag, input_tag
         end
@@ -57,9 +57,10 @@ class Child
     private
 
     def single_match?(child_tag, input_tag)
+        # puts "Matching child #{child_tag} with input #{input_tag}"
         return false unless child_tag # if nil, no match
         return true if child_tag == :ANY      #
-        input_tag.to_s == child_tag.to_s
+        input_tag.to_sym == child_tag.to_sym
     end
 
     def to_s

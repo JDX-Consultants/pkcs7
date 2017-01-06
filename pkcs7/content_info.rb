@@ -2,7 +2,7 @@ require_relative 'sequence'
 
 class ContentInfo < Sequence
 
-    TAG = :U16 # This is a default tag, required for the handling of C0
+    # TAG = :U16 # This is a default tag, required for the handling of C0
 
     DATA_TYPES = {
         'pkcs7-signedData' => 'PKCS7SignedData',
@@ -16,6 +16,10 @@ class ContentInfo < Sequence
     def initialize
         super
         @identifier = nil
+    end
+
+    def tag
+        :U16
     end
 
     def <<(object)

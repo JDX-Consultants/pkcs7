@@ -11,6 +11,7 @@ class PKCS7Builder
     def initialize
         @root = PKCS7Root.new
         @root.name = 'PKCS7'
+        Debug.instance.turn_on
     end
 
     def parse(der)
@@ -28,7 +29,7 @@ class PKCS7Builder
                 # puts "\nStart parsing element using #{parent.class}"
                 asn_element.value.each do |asn_child_element|
                     tag = tag(asn_child_element)
-                    # puts "\nParsing tag '#{tag}' in object #{parent}"
+                    # Debug.instance.show "   ['#{tag}' in #{parent.class}]"
                     new_node = parent.instance_for_tag(tag)
                     raise "Could not create node in #{parent.class} for tag #{tag}" unless new_node
                     parent << new_node

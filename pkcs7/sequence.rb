@@ -10,21 +10,22 @@ class Sequence < Node
         raise "No class defined in #{self.class}" unless @children and @children.size > 0
     end
 
+    def list_exhausted?
+        puts "List exhausted" if @position >= @children.size
+        @position >= @children.size - 1
+    end
+
     def instance_for_tag(tag)
-        (@position..(@children.size - 1)).each do |i|
+        (@position..@children.size - 1).each do |i|
             child = @children[i]
             if child.match? tag
                 @position = i + 1
                 return child.create_child
             else
-                unless child.optional?
-                    raise "\nSequence: tag '#{tag}' not found in node #{self.class}, position: #{@position}, expecting children #{@children.collect{ |child| child.class_name}}"
-                # else
-                #     puts "\n... skipping tag #{child.tag} when looking for #{tag}"
-                end
+                raise "\nSequence: mandatory tag '#{tag}' not found in node #{self.class} at position: #{@position}, expecting children #{@children.collect{ |child| child.tag}}" unless child.optional?
             end
         end
-        raise "\nSequence: tag '#{tag}' not found in node #{self.class}, position: #{@position}, expecting children #{@children.collect{ |child| child.class_name}}"
+        raise "\nSequence: tag '#{tag}' not found in node #{self.class}, position: #{@position}, expecting children #{@children.collect{ |child| child.tag}}"
     end
 
 end
