@@ -3,13 +3,13 @@ require_relative 'sequence'
 class SignerInfo < Sequence
 
     CHILDREN = [
-        Child.new('version', 'Version'),
-        Child.new('signerIdentifier', 'SignerIdentifier'),
-        Child.new('digestAlgorithms', 'AlgorithmIdentifier'),
-        Child.new('authenticatedAttributes', 'Attributes', context_specific: 0),
-        Child.new('digestEncryptionAlgorithm', 'AlgorithmIdentifier'),
-        Child.new('encryptedDigest', 'EncryptedDigest'),
-        Child.new('unauthenticatedAttributes', 'Attributes', context_specific: 1),
+        { name: 'version', class_name: 'Version' },
+        { name: 'signerIdentifier', class_name: 'SignerIdentifier' },
+        { name: 'digestAlgorithms', class_name: 'AlgorithmIdentifier' },
+        { name: 'authenticatedAttributes', class_name: 'Attributes', context_specific: 0 },
+        { name: 'digestEncryptionAlgorithm', class_name: 'AlgorithmIdentifier' },
+        { name: 'encryptedDigest', class_name: 'EncryptedDigest' },
+        { name: 'unauthenticatedAttributes', class_name: 'Attributes', context_specific: 1 },
     ]
 
 end

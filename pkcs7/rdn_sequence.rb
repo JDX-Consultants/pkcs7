@@ -2,6 +2,6 @@ require_relative 'set_of'
 
 class RDNSequence < SetOf
 
-    CHILD = Child.new('relativeDistinguishedNames', 'RelativeDistinguishedNames')
+    CHILD = { name: 'relativeDistinguishedNames', class_name: 'RelativeDistinguishedNames' }
 
 end

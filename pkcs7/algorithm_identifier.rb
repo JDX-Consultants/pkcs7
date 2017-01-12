@@ -6,16 +6,14 @@ require_relative 'child'
 class AlgorithmIdentifier < Sequence
 
     CHILDREN = [
-        Child.new('algorithm', 'OIDNode'),
-        Child.new('parameters', 'NullNode', optional: true),
-        Child.new('algorithmParameters', 'Algorithm', optional: true),
-        Child.new('undefined', 'AnyNode', optional: true)
+        { name: 'algorithm', class_name: 'OIDNode' },
+        { name: 'parameters', class_name: 'NullNode', optional: true },
     ]
 
 end
 
 # AlgorithmIdentifier ::= SEQUENCE {
-#   algorithm   ALGORITHM.&id({SupportedAlgorithms}),
+#   algorithm   ALGORITHM.&id({SupportedAlgorithms} },
 #   parameters  ALGORITHM.&Type({SupportedAlgorithms}{@algorithm}) OPTIONAL
 # }
 

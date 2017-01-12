@@ -4,13 +4,13 @@ class CRL < Sequence
 
 
     CHILDREN = [
-        Child.new('version', 'Version', context_specific: 0),
-        Child.new('signature', 'AlgorithmIdentifier'),
-        Child.new('issuer', 'RelativeDistinguishedNames'),
-        Child.new('thisUpdate', 'DateNode'),
-        Child.new('nextUpdate', 'DateNode'),
-        Child.new('revokedCertificates', 'RevokedCertificates'),
-        Child.new('crlExtensions', 'Extensions', context_specific: 3),
+        { name: 'version', class_name: 'Version', context_specific: 0 },
+        { name: 'signature', class_name: 'AlgorithmIdentifier' },
+        { name: 'issuer', class_name: 'RelativeDistinguishedNames' },
+        { name: 'thisUpdate', class_name: 'DateNode' },
+        { name: 'nextUpdate', class_name: 'DateNode' },
+        { name: 'revokedCertificates', class_name: 'RevokedCertificates' },
+        { name: 'crlExtensions', class_name: 'Extensions', context_specific: 3 },
     ]
 
 end

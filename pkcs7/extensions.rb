@@ -2,6 +2,6 @@ require_relative 'sequence_of'
 
 class Extensions < SequenceOf
 
-    CHILD = Child.new 'extension', 'Extension'
+    CHILD = { name: 'extension', class_name: 'Extension' }
 
 end

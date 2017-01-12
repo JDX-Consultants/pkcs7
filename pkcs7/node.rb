@@ -1,28 +1,52 @@
 class Node
 
-    attr_accessor :name, :value, :tag, :level
+    attr_accessor :name, :value, :instances, :level
 
     def <<(object)
-        @level ||= 0
-        object.level = @level+ 1
-        # puts "Adding '#{object.class}' to node '#{self.class}', name: #{object.name}"
-        puts
-        object_tag = object.tag
-        Debug.instance.show "#{''.ljust(@level * 2)}#{object.name} (#{object_tag}):"
+        Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name}:"
         raise "Invalid object, expecing a node and received a '#{object.class}' with content #{object.inspect}" unless object.is_a? Node
         @instances ||= [] # Lazy instantiation (and no need for initializer), as some objects are leaves
         @instances << object
     end
 
+    def parse_element(asn_element, level)
+        if asn_element.value.is_a?(Array)
+            asn_element.value.each do |asn_child_element|
+                tag = input_tag(asn_child_element)
+                # Debug.instance.show "\n['#{tag}' in '#{self.class}' (L#{level})]"
+                new_node = instance_for_tag(tag, level + 1)
+                raise "Could not create node in #{self.class} for tag #{tag}" unless new_node
+                new_node.level = level
+                self << new_node
+                if new_node.is_a? ImplicitSequence # Horrible trick, if an implicit sequence, pass the whole baby (to avoid 'eating a level')
+                    new_node.parse_element asn_element, level + 1
+                else
+                    new_node.parse_element asn_child_element, level + 1
+                end
+            end
+        else
+            @value = asn_element.value.to_s
+            Debug.instance.show " #{display_value}"
+        end
+    end
+
+    def input_tag(asn_node)
+        "#{asn_node.tag_class.to_s[0]}#{asn_node.tag}".to_sym
+    end
 
     # This class is defined to allow for overwritting
-    def tag 
+    def node_tag
         eval "#{self.class}::TAG"
     end
 
     def value=(value)
         @value = value.to_s
         Debug.instance.show " #{display_value}"
+    end
+
+    # Should be overwritten by composite nodes (sequence, set, sequence of, set of, implicit sequence, ...) and never invoked for leaf nodes
+    def instance_for_tag(tag, level)
+        raise "Instance for tag called on leaf node #{self.class} with tag #{tag} and level #{level}"
     end
 
     def dump(indent)
@@ -39,8 +63,12 @@ class Node
         return '---' unless @value
         value = @value.strip
         value = value.ascii_only? ? value : value.unpack('H*').first
-        value = (value.size > 100 ? "#{value[0..100]}..." : value)
+        value = value.size > 100 ? "#{value[0..100]}..." : value
         value
+    end
+
+    def to_s
+        "#{self.class}: level: #{@level}, name: #{@name}"
     end
 
 end

@@ -2,7 +2,7 @@ require_relative 'set_of'
 
 class RelativeDistinguishedName < SetOf
 
-    CHILD = Child.new('name', 'AttributeTypeAndDistinguishedValue')
+    CHILD = { name: 'name', class_name: 'AttributeTypeAndDistinguishedValue' }
 
 end
 

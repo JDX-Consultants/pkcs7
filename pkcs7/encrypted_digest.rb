@@ -1,0 +1,5 @@
+class EncryptedDigest < BinaryNode
+
+
+
+end

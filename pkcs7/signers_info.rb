@@ -2,7 +2,7 @@ require_relative 'array_node'
     
 class SignersInfo < SetOf
 
-    CHILD = Child.new('signersInfo', 'SignerInfo')
+    CHILD = { name: 'signersInfo', class_name: 'SignerInfo' }
 
 end
 

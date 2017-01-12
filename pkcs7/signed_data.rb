@@ -3,12 +3,12 @@ require_relative 'sequence'
 class SignedData < Sequence
 
     CHILDREN = [
-        Child.new('version', 'Version'),
-        Child.new('digestAlgorithms', 'DigestAlgorithmIdentifiers'),
-        Child.new('contentInfo', 'ContentInfo'),
-        Child.new('certificates', 'CertificateSet', context_specific: 0, optional: true),
-        Child.new('crls', 'CertificateRevocationLists', context_specific: 1, optional: true),
-        Child.new('signersInfo', 'SignersInfo'),
+        { name: 'version', class_name: 'Version' },
+        { name: 'digestAlgorithms', class_name: 'DigestAlgorithmIdentifiers' },
+        { name: 'contentInfo', class_name: 'ContentInfo' },
+        { name: 'certificates', class_name: 'CertificateSet', context_specific: 0, optional: true },
+        { name: 'crls', class_name: 'CertificateRevocationLists', context_specific: 1, optional: true },
+        { name: 'signersInfo', class_name: 'SignersInfo' },
 ]
 
 end

@@ -4,9 +4,9 @@ class RevokedCertificate < Sequence
 
 
     CHILDREN = [
-        Child.new('userCertificate', 'CertificateSerialNumber'),
-        Child.new('revocationDate', 'DateNode'),
-        Child.new('crlExtensions', 'Extensions', context_specific: 3),
+        { name: 'userCertificate', class_name: 'CertificateSerialNumber' },
+        { name: 'revocationDate', class_name: 'DateNode' },
+        { name: 'crlExtensions', class_name: 'Extensions', context_specific: 3 },
     ]
 
 end

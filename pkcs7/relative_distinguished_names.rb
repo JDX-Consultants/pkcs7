@@ -3,7 +3,7 @@ require_relative 'child'
 
 class RelativeDistinguishedNames < SequenceOf
 
-    CHILD = Child.new('name', 'RelativeDistinguishedName')
+    CHILD = { name: 'name', class_name: 'RelativeDistinguishedName' }
 
 end
 

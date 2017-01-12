@@ -5,7 +5,7 @@ class BinaryNode < Node
     TAG = :U4
 
     def value=(value)
-        @value = value.hex
+        @value = value.to_s.unpack('H')
     end
     
 end

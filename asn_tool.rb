@@ -9,7 +9,6 @@ class ASNTool
     require './path'
     include PATH
 
-
     def initialize(hex_data)
         @asn = OpenSSL::ASN1.decode(hex_data.strip)
         # puts "Initialised stream: #{@asn.to_s}"
@@ -48,19 +47,19 @@ class ASNTool
         padding = ''.ljust(indent * TAB_SIZE) # Leading spaces in display
         nice_path = PATH::map path
         if asn_element.value.is_a? Array
-            if nice_path
-                puts "#{padding}#{nice_path}:"
-            else
-                if asn_element.tag_class == :UNIVERSAL
-                    case asn_element.tag
-                    when 16 then puts "#{padding}SEQUENCE (#{path[-1]}):"
-                    when 17 then puts "#{padding}SET (#{path[-1]}):"
-                    else puts "#{padding}#{asn_element.tag_class}[#{asn_element.tag}] (#{path[-1]}):"
-                    end
-                else
-                    puts "#{padding}#{asn_element.tag_class} [#{asn_element.tag}] (#{path[-1]}):"
+            # if nice_path
+            #     puts "#{padding}#{nice_path}:"
+            # else
+            if asn_element.tag_class == :UNIVERSAL
+                case asn_element.tag
+                when 16 then puts "#{padding}SEQUENCE (#{path[-1]} - #{indent}):"
+                when 17 then puts "#{padding}SET (#{path[-1]} - #{indent}):"
+                else puts "#{padding}#{asn_element.tag_class}[#{asn_element.tag}] (#{path[-1]}):"
                 end
+            else
+                puts "#{padding}#{asn_element.tag_class} [#{asn_element.tag} - #{indent}] (#{path[-1]}):"
             end
+            # end
             asn_element.value.each do |node|
                 local_path = path.clone
                 local_path << ASNTool.path(node)
@@ -68,38 +67,47 @@ class ASNTool
             end
         else
             if asn_element.tag_class ==  :UNIVERSAL
-                value = asn_element.value.to_s.strip
-                # value = value.ascii_only? ? value : value.unpack('H*').first
-                # value = "#{value[0..50]}..." if value.length > 50
-                if nice_path
-                    puts "#{padding}#{nice_path}: #{value}"
-                else
-                    # nice_path = path.join('/')
-                    nice_path = path[-1]
-                    case asn_element.tag
-                    when 1 then puts "#{padding}BOOL (#{nice_path}): #{value}"
-                    when 2 then puts "#{padding}INT (#{nice_path}): #{value}"
-                    # when 3 then puts "#{padding}BITS (#{nice_path}): #{value.to_der}"
-                    when 4 then puts "#{padding}HEX (#{nice_path}): #{value..to_der}"
-                    when 5 then puts "#{padding}NULL"
-                    when 6 then puts "#{padding}OID (#{nice_path}): #{value}"
-                    when 10 then puts "#{padding}ENUM (#{nice_path}): #{value}"
-                    when 12 then puts "#{padding}UTF8 (#{nice_path}): #{value}"
-                    when 18 then puts "#{padding}NUM (#{nice_path}): #{value}"
-                    when 19 then puts "#{padding}STRING (#{nice_path}): #{value}"
-                    when 22 then puts "#{padding}MAIL (#{nice_path}): #{value}"
-                    when 23 then puts "#{padding}UTC (#{nice_path}): #{value}"
-                    when 24 then puts "#{padding}GMT (#{nice_path}): #{value}"
-                    when 26 then puts "#{padding}TEXT (#{nice_path}): #{value}"
-                    when 27 then puts "#{padding}TEXT (#{nice_path}): #{value}"
-                    when 28 then puts "#{padding}TEXT (#{nice_path}): #{value}"
-                    else puts "#{padding}[#{asn_element.tag_class}] #{asn_element.tag} (#{nice_path}): #{value}"
-                    end
+                value = display_value(asn_element.value.to_s.strip)
+                # if nice_path
+                #     puts "#{padding}#{nice_path}: #{value}"
+                # else
+                #     # nice_path = path.join('/')
+                nice_path = path[-1]
+                case asn_element.tag
+                when 1 then puts "#{padding}BOOL (#{nice_path} - #{indent}): #{value}"
+                when 2 then puts "#{padding}INT (#{nice_path} - #{indent}): #{value}"
+                when 3 then puts "#{padding}BITS (#{nice_path} - #{indent}): #{value}"
+                when 4 then puts "#{padding}HEX (#{nice_path} - #{indent}): #{value}"
+                when 5 then puts "#{padding}NULL"
+                when 6 then puts "#{padding}OID (#{nice_path} - #{indent}): #{value}"
+                when 10 then puts "#{padding}ENUM (#{nice_path} - #{indent}): #{value}"
+                when 12 then puts "#{padding}UTF8 (#{nice_path} - #{indent}): #{value}"
+                when 18 then puts "#{padding}NUM (#{nice_path} - #{indent}): #{value}"
+                when 19 then puts "#{padding}STRING (#{nice_path} - #{indent}): #{value}"
+                when 22 then puts "#{padding}MAIL (#{nice_path} - #{indent}): #{value}"
+                when 23 then puts "#{padding}UTC (#{nice_path} - #{indent}): #{value}"
+                when 24 then puts "#{padding}GMT (#{nice_path} - #{indent}): #{value}"
+                when 26 then puts "#{padding}TEXT (#{nice_path} - #{indent}): #{value}"
+                when 27 then puts "#{padding}TEXT (#{nice_path} - #{indent}): #{value}"
+                when 28 then puts "#{padding}TEXT (#{nice_path} - #{indent}): #{value}"
+                else puts "#{padding}[#{asn_element.tag_class}] #{asn_element.tag} (#{nice_path} - #{indent}): #{value}"
                 end
             else
-                puts "#{padding}[#{asn_element.tag_class}] #{asn_element.tag} (#{nice_path}): #{value}"
+                puts "#{padding}[#{asn_element.tag_class}] #{asn_element.tag} (#{nice_path} - #{indent}): #{value}"
             end
         end
+    end
+
+
+    def display_value(rough_value)
+        return '---' unless rough_value
+        value = rough_value.strip
+        value = value.ascii_only? ? value : value.unpack('H*').first
+        value = value.size > 100 ? "#{value[0..100]}..." : value
+        # result = ''
+        # value.each_byte { |byte| puts byte.to_s('H')}
+        # value.each_byte { |byte| result << byte.to_i < 32 ? ('..') : byte}
+        # result
     end
 
     class Pattern

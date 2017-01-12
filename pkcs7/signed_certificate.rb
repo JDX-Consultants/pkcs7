@@ -3,8 +3,8 @@ require_relative 'implicit_sequence'
 class SignedCertificate < ImplicitSequence
 
     CHILDREN = [
-        Child.new('certificate', 'Certificate'),
-        Child.new('signatureAlgorithmIdentifier', 'AlgorithmIdentifier'),
-        Child.new('signature', 'BitStringNode'),
+        { name: 'certificate', class_name: 'Certificate' },
+        { name: 'signatureAlgorithmIdentifier', class_name: 'AlgorithmIdentifier' },
+        { name: 'signature', class_name: 'BitStringNode' },
     ]
 end

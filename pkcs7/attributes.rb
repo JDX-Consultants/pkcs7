@@ -1,7 +1,7 @@
 require_relative 'set_of'
 
-class Attributes < ArrayNode
+class Attributes < SetOf
 
-    CHILD = Child.new('attributes', 'Attributes')
+    CHILD = { name: 'attribute', class_name: 'Attribute' }
 
 end

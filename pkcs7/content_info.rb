@@ -6,37 +6,31 @@ class ContentInfo < Sequence
 
     DATA_TYPES = {
         'pkcs7-signedData' => 'PKCS7SignedData',
-        'pkcs7-data' => 'Node',
+        'pkcs7-data' => 'BinaryNode',
         'pkcs7-envelopedData' => 'EnvelopedData',
         'pkcs7-authenticatedData' => 'AuthenticatedData',
     }
 
-    CHILDREN = [Child.new('contentType', 'ContentType')]
+    CHILDREN = [
+        { name: 'contentType', class_name: 'ContentType' },
+    ]
 
-    def initialize
-        super
-        @identifier = nil
-    end
-
-    def tag
-        :U16
-    end
-
+    # This method overwrittes the object storing, in order to store the tag
     def <<(object)
-        object_tag = eval("#{object.class}.new.tag")
-        @identifier = object if :U6 == object_tag
+        object_tag = eval("#{object.class}.new.node_tag")
+        @identifier = object if :U6 == object_tag.to_sym
         super(object)
     end
 
-    def instance_for_tag(tag)
+    def instance_for_tag(tag, level)
         if tag.to_sym == :C0
-            raise "Uninitialised contentType for #{self.class}" unless @identifier
-            type = @identifier.value
+            raise "Uninitialised contentType for #{self.class} at level #{level}" unless @identifier
+            type = @identifier.value.to_s
             class_name = DATA_TYPES[type]
-            raise "Invalid code '#{type} in #{self.class}" unless class_name
-            Child.new(@identifier.value, class_name).create_child
+            raise "Invalid code '#{type} in #{self.class} for level #{level}, identifier is #{type}" unless class_name
+            Child.instantiate({name: @identifier.value, class_name: class_name}).node
         else
-            super(tag)
+            super(tag, level)
         end
     end
 

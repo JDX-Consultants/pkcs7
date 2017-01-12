@@ -4,16 +4,16 @@ class Certificate < Sequence
 
 
     CHILDREN = [
-        Child.new('version', 'Version', context_specific: 0),
-        Child.new('serialNumer', 'CertificateSerialNumber'),
-        Child.new('signature', 'AlgorithmIdentifier'),
-        Child.new('issuer', 'RelativeDistinguishedNames'),
-        Child.new('validity', 'Validity'),
-        Child.new('subject', 'RelativeDistinguishedNames'),
-        Child.new('subjectPublicKeyInfo', 'SubjectPublicKeyInfo'),
-        Child.new('issuerUniqueIdentifier', 'BitStringNode', context_specific:1, implicit: true, optional: true),
-        Child.new('subjectUniqueIdentifier', 'BitStringNode', context_specific:2, implicit: true, optional: true),
-        Child.new('extensions', 'Extensions', context_specific: 3, optional: true),
+        { name: 'version', class_name: 'Version', context_specific: 0 },
+        { name: 'serialNumer', class_name: 'CertificateSerialNumber' },
+        { name: 'signature', class_name: 'AlgorithmIdentifier' },
+        { name: 'issuer', class_name: 'RelativeDistinguishedNames' },
+        { name: 'validity', class_name: 'Validity' },
+        { name: 'subject', class_name: 'RelativeDistinguishedNames' },
+        { name: 'subjectPublicKeyInfo', class_name: 'SubjectPublicKeyInfo' },
+        { name: 'issuerUniqueIdentifier', class_name: 'BitStringNode', context_specific:1, implicit: true, optional: true },
+        { name: 'subjectUniqueIdentifier', class_name: 'BitStringNode', context_specific:2, implicit: true, optional: true },
+        { name: 'extensions', class_name: 'Extensions', context_specific: 3, optional: true },
     ]
 
 end

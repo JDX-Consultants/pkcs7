@@ -3,8 +3,8 @@ require_relative 'sequence'
 class IssuerAndSerialNumber < Sequence
 
     CHILDREN = [
-        Child.new('issuer', 'Name'),
-        Child.new('serialNumber', 'IntegerNode'),
+        { name: 'issuer', class_name: 'Name' },
+        { name: 'serialNumber', class_name: 'IntegerNode' },
     ]
 
 end

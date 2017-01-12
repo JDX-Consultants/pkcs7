@@ -3,7 +3,7 @@ require_relative 'child'
 
 class DigestAlgorithmIdentifiers < SetOf
 
-    CHILD = Child.new('digestAlgorithmIdentifiers', 'DigestAlgorithmIdentifier')
+    CHILD = { name: 'digestAlgorithmIdentifiers', class_name: 'DigestAlgorithmIdentifier' }
 
 end
 

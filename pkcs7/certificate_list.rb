@@ -3,7 +3,7 @@ require_relative 'sequence_of'
 # Used for revoked certificates
 class CertificateList < SequenceOf
 
-    CHILD = Child.new 'signedRevokedCertificate', 'SignedRevokedCertificates'
+    CHILD = {name: 'signedRevokedCertificate', class_name: 'SignedRevokedCertificates' }
 
 end
 

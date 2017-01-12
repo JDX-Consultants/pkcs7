@@ -3,8 +3,8 @@ require_relative 'sequence'
 class SubjectPublicKeyInfo < Sequence
 
     CHILDREN = [
-        Child.new('algorithm', 'AlgorithmIdentifier'),
-        Child.new('subjectPublicKey', 'BitStringNode')
+        { name: 'algorithm', class_name: 'AlgorithmIdentifier' },
+        { name: 'subjectPublicKey', class_name: 'BitStringNode' },
     ]
 
 end

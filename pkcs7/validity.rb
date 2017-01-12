@@ -3,8 +3,8 @@ require_relative 'sequence'
 class Validity < Sequence
 
     CHILDREN = [
-        Child.new('notBefore', 'DateNode'),
-        Child.new('notAfter', 'DateNode'),
+        { name: 'notBefore', class_name: 'DateNode' },
+        { name: 'notAfter', class_name: 'DateNode' },
     ]
 
 end

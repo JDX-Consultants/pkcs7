@@ -8,8 +8,8 @@ end
 # class Name < Sequence
 
 #     CHILDREN = [
-#         Child.new('type', 'Node'),
-#         Child.new('type', 'Node'),
+#         { name: 'type', class_name: 'Node' },
+#         { name: 'type', class_name: 'Node' },
 #     ]
 
 # end

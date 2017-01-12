@@ -3,15 +3,18 @@ require_relative 'node'
 class ArrayNode < Node
 
     def initialize
-        @child = self.class::CHILD
-        raise "Missing CHILD object in #{self.class}" unless @child
+        raise "Missing CHILD object in #{self.class}" unless self.class::CHILD
+        @child = Child.instantiate(self.class::CHILD)
+
     end
 
-    def instance_for_tag(tag)
+    def instance_for_tag(tag, level)
         if @child.match? tag
-            @child.create_child
+            child_node = @child.node
+            child_node.level = level
+            return child_node
         else
-            raise "Invalid tag '#{tag} for class #{self.class}, expecting '#{self.tag}' for name #{self.name}"
+            raise "Invalid tag '#{tag}' received for class #{self.class} at level #{level}, expecting '#{@child.tag}'"
         end
     end
 

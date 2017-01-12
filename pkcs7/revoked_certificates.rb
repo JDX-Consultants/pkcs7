@@ -2,6 +2,6 @@ require_relative 'sequence_of'
 
 class RevokedCertificates< SequenceOf
 
-    CHILD = Child.new 'revokedCertificate', 'RevokedCertificate'
+    CHILD = { name: 'revokedCertificate', class_name: 'RevokedCertificate' }
 
 end

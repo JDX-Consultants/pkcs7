@@ -3,8 +3,8 @@ require_relative 'sequence'
 class Signature < Sequence
 
     CHILDREN = [
-        Child.new('algorithmIdentifier', 'AlgorithmIdentifier'),
-        Child.new('encrypted', 'BitString'),
+        { name: 'algorithmIdentifier', class_name: 'AlgorithmIdentifier' },
+        { name: 'encrypted', class_name: 'BitString' },
 ]
 
 end

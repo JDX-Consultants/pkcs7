@@ -2,6 +2,6 @@ require_relative 'sequence'
 
 class PKCS7Root < Sequence
 
-    CHILDREN = [Child.new('contentInfo', 'ContentInfo')]
+    CHILDREN = [{ name: 'contentInfo', class_name: 'ContentInfo' }]
 
 end

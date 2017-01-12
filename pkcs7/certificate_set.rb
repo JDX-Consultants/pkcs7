@@ -2,7 +2,7 @@ require_relative 'sequence_of'
 
 class CertificateSet < SequenceOf
 
-    CHILD = Child.new 'signedCertificate', 'SignedCertificate'
+    CHILD = { name: 'signedCertificate', class_name: 'SignedCertificate' }
 
 end
 
