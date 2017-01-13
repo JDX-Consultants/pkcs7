@@ -17,6 +17,7 @@ class Sequence < Node
                 @position = i + 1
                 child_node = child.node
                 child_node.level = level
+                child_node.tag = tag
                 return child.node
             else
                 raise "Sequence: mandatory tag '#{tag}' not found in node #{self.class} at position: #{@position} and level #{level}, expecting children #{@children.collect{ |child| child.tag}}" unless child.optional?

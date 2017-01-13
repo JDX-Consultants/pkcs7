@@ -5,7 +5,7 @@ class Node
     attr_accessor :name, :value, :instances, :level, :tag
 
     def <<(object)
-        Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name} (#{object.tag}):"
+        Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name}_#{object.tag}:"
         raise "Invalid object, expecing a node and received a '#{object.class}' with content #{object.inspect}" unless object.is_a? Node
         @instances ||= [] # Lazy instantiation (and no need for initializer), as some objects are leaves
         @instances << object
@@ -28,7 +28,7 @@ class Node
                 end
             end
         else
-            @value = asn_element.value.to_s
+            @value = asn_element.value.to_s.strip
             Debug.instance.show " #{display_value}"
         end
     end
@@ -37,7 +37,7 @@ class Node
         "#{asn_node.tag_class.to_s[0]}#{asn_node.tag}".to_sym
     end
 
-    # This class is defined to allow for overwritting
+    # This class is defined to allow for overwritting by edge-cases (e.g. context-specific)
     def node_tag
         begin
             eval "#{self.class}::TAG"
@@ -46,19 +46,15 @@ class Node
         end
     end
 
-    def value=(value)
-        @value = value.to_s
-    end
-
     # Should be overwritten by composite nodes (sequence, set, sequence of, set of, implicit sequence, ...) and never invoked for leaf nodes
     def instance_for_tag(tag, level)
         raise "Instance for tag called on leaf node #{self.class} with tag #{tag} and level #{level}"
     end
 
     def dump(indent)
-        dump_name = name ? name.strip : '---'
+        dump_name = @name ? @name.gsub('-.', '__') : '---'
         if @instances and @instances.size > 0
-            puts "#{''.ljust(indent * 2)}#{dump_name.strip}"
+            puts "#{''.ljust(indent * 2)}#{dump_name.strip}:"
             @instances.each { |element| element.dump(indent + 1) }
         else
             puts "#{''.ljust(indent * 2)}#{dump_name}: #{display_value}"
@@ -68,9 +64,14 @@ class Node
     def display_value()
         return '---' unless @value
         value = @value.strip
-        value = value.ascii_only? ? value : value.unpack('H*').first
+        value = is_ascii?(value) ? value : value.unpack('H*').first
         value = value.size > 100 ? "#{value[0..100]}...[#{value.size}]" : value
-        value
+        "'#{value}'"
+    end
+
+    def is_ascii?(s)
+        s.each_byte { |b| return false if b < 32 or b > 127}
+        true
     end
 
     def to_s

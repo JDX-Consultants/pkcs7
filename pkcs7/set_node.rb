@@ -20,7 +20,10 @@ class SetNode < Node
     def instance_for_tag(tag, level)
         child = @children[tag]
         if child
-            child.node
+            child_node =  child.node
+            child_node.level = level
+            child_node.tag = tag
+            child_node
         else
             raise "Invalid tag received for node #{self.class}, received #{tag} at #{level}, while expecting #{@children}"
         end

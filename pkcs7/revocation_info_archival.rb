@@ -5,7 +5,7 @@ class RevocationInfoArchival < Sequence
     # Value of the OID: 1.2.840.113583.1.1.8
 
     CHILDREN = [
-        { name: 'crl', class_name: 'CRLs', context_specific: 0, optional: true },
+        { name: 'crls', class_name: 'CRLs', context_specific: 0, optional: true },
         { name: 'ocsp', class_name: 'OCSPResponses', context_specific: 1, optional: true },
         { name: 'otherRevInfo', class_name: 'OtherRevInfo', context_specific: 2, optional: true },
     ]

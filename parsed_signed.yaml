@@ -1,0 +1,332 @@
+PKCS7:
+  contentInfo:
+    contentType: 'pkcs7-signedData'
+    pkcs7_signedData:
+      signedData:
+        version: '1'
+        digestAlgorithms:
+          digestAlgorithmIdentifiers:
+            algorithm: 'SHA256'
+            parameters: ''
+        contentInfo:
+          contentType: 'pkcs7-data'
+          pkcs7_data:
+            any: '2c7239e8139069a473936a13179a7cf0a547ba65'
+        certificates:
+          certificates:
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '16616870346450866874'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                validity:
+                  notBefore: '2016-12-14 16:31:19 UTC'
+                  notAfter: '2017-12-14 16:31:19 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100f27a981e701f6679a953c41193488bc71d5066e50a64cccab6f3fda53062d2c032cc84cdb0494936b6a...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414307c523c2183066faab7f2eda555ad31959531b3'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3081e28014307c523c2183066faab7f2eda555ad31959531b3a181bea481bb3081b8310b30090603550406130242453119301...[458]'
+                    extension:
+                      extnId: 'basicConstraints'
+                      value: '30030101ff'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: 'b8d0993ecbb15c9044c9b941e3686e39d998ddacce3f039fbbb05cb89bfa04749ec5cba3c5caa3ab56ade0d0b62bf59d37e86...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '16616870346450866874'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                validity:
+                  notBefore: '2016-12-14 16:31:19 UTC'
+                  notAfter: '2017-12-14 16:31:19 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100f27a981e701f6679a953c41193488bc71d5066e50a64cccab6f3fda53062d2c032cc84cdb0494936b6a...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414307c523c2183066faab7f2eda555ad31959531b3'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3081e28014307c523c2183066faab7f2eda555ad31959531b3a181bea481bb3081b8310b30090603550406130242453119301...[458]'
+                    extension:
+                      extnId: 'basicConstraints'
+                      value: '30030101ff'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: 'b8d0993ecbb15c9044c9b941e3686e39d998ddacce3f039fbbb05cb89bfa04749ec5cba3c5caa3ab56ade0d0b62bf59d37e86...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '16616870346450866874'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                validity:
+                  notBefore: '2016-12-14 16:31:19 UTC'
+                  notAfter: '2017-12-14 16:31:19 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'ST'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'L'
+                      value: 'Louvain-La-Neuve'
+                  name:
+                    name:
+                      type: 'O'
+                      value: 'I.R.I.S.'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Didier de Ghellinck, Scrum Master'
+                  name:
+                    name:
+                      type: 'emailAddress'
+                      value: 'didier.de.ghellinck@iriscorporate.com'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100f27a981e701f6679a953c41193488bc71d5066e50a64cccab6f3fda53062d2c032cc84cdb0494936b6a...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414307c523c2183066faab7f2eda555ad31959531b3'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3081e28014307c523c2183066faab7f2eda555ad31959531b3a181bea481bb3081b8310b30090603550406130242453119301...[458]'
+                    extension:
+                      extnId: 'basicConstraints'
+                      value: '30030101ff'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: 'b8d0993ecbb15c9044c9b941e3686e39d998ddacce3f039fbbb05cb89bfa04749ec5cba3c5caa3ab56ade0d0b62bf59d37e86...[1024]'
+        signersInfo:
+          signersInfo:
+            version: '1'
+            signerIdentifier:
+              issuer:
+                name:
+                  name:
+                    type: 'C'
+                    value: 'BE'
+                name:
+                  name:
+                    type: 'ST'
+                    value: 'Louvain-La-Neuve'
+                name:
+                  name:
+                    type: 'L'
+                    value: 'Louvain-La-Neuve'
+                name:
+                  name:
+                    type: 'O'
+                    value: 'I.R.I.S.'
+                name:
+                  name:
+                    type: 'CN'
+                    value: 'Didier de Ghellinck, Scrum Master'
+                name:
+                  name:
+                    type: 'emailAddress'
+                    value: 'didier.de.ghellinck@iriscorporate.com'
+              serialNumber: '16616870346450866874'
+            digestAlgorithms:
+              algorithm: 'SHA256'
+              parameters: ''
+            authenticatedAttributes:
+              attribute:
+                type: 'contentType'
+                undefined:
+                  any: 'pkcs7-data'
+              attribute:
+                type: 'signingTime'
+                undefined:
+                  any: '2017-01-12 08:30:06 UTC'
+              attribute:
+                type: 'messageDigest'
+                undefined:
+                  any: 'e43b7d69ee90940bf5677b801a0838a021addcb48fcbe544a500a4bc09c05cec'
+              attribute:
+                type: 'SMIME-CAPS'
+                undefined:
+                  any:
+                    any:
+                      any: 'AES-256-CBC'
+                    any:
+                      any: 'AES-192-CBC'
+                    any:
+                      any: 'AES-128-CBC'
+                    any:
+                      any: 'DES-EDE3-CBC'
+                    any:
+                      any: 'RC2-CBC'
+                      any: '128'
+                    any:
+                      any: 'RC2-CBC'
+                      any: '64'
+                    any:
+                      any: 'DES-CBC'
+                    any:
+                      any: 'RC2-CBC'
+                      any: '40'
+            digestEncryptionAlgorithm:
+              algorithm: 'rsaEncryption'
+              parameters: ''
+            encryptedDigest: '741da04bc2756349781b541a6be9299fbf9689ba72d5ce8b522bac52d6e40b42966119561061ffeac617c2e0aa9790947fcfc...[1024]'

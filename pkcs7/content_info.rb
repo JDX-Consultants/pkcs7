@@ -7,7 +7,7 @@ class ContentInfo < TypedSequence
 
     DATA_TYPES = {
         'pkcs7-signedData' => 'PKCS7SignedData',
-        'pkcs7-data' => 'BinaryNode',
+        'pkcs7-data' => 'AnyNode',
         'pkcs7-envelopedData' => 'EnvelopedData',
         'pkcs7-authenticatedData' => 'AuthenticatedData',
     }

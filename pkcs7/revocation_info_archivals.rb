@@ -4,7 +4,7 @@ class RevocationInfoArchivals < SetOf
 
     # Value of the OID: 1.2.840.113583.1.1.8
 
-    CHILD = { name: 'RevocationInfoArchivals', class_name: 'RevocationInfoArchival'}
+    CHILD = { name: 'revocationInfoArchivals', class_name: 'RevocationInfoArchival'}
 
 
 end

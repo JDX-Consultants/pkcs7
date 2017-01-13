@@ -4,13 +4,14 @@ class Attribute < TypedSequence
 
     DATA_TYPES = {
         '1.2.840.113583.1.1.8' => 'RevocationInfoArchivals',
-        'id-smime-aa-timeStampToken' => 'ContentInfo',        
+        'id-smime-aa-timeStampToken' => 'AttributesSet',
+        'pkcs7-signedData' => 'PKCS7SignedData',
+        'id-smime-aa-signingCertificate' => 'SigningCertificates',
     }
 
 
     CHILDREN = [
         { name: 'type', class_name: 'OIDNode' },
-        { name: 'value', class_name: 'AnyNode' },
     ]
 
 end

@@ -12,6 +12,7 @@ class ArrayNode < Node
         if @child.match? tag
             child_node = @child.node
             child_node.level = level
+            child_node.tag = tag
             return child_node
         else
             raise "Invalid tag '#{tag}' received for class #{self.class} at level #{level}, expecting '#{@child.tag}'"

@@ -4,8 +4,8 @@ class Child
 
     def self.instantiate(in_params)
         params = in_params.clone
-        name = (params.delete(:name))
-        class_name = (params.delete(:class_name))
+        name = params.delete(:name)
+        class_name = params.delete(:class_name)
         raise "Missing name and class name" unless name and class_name
         self.new(name, class_name, params)
     end

@@ -1,0 +1,1520 @@
+PKCS7:
+  contentInfo:
+    contentType: 'pkcs7-signedData'
+    pkcs7-signedData:
+      signedData:
+        version: '1'
+        digestAlgorithms:
+          digestAlgorithmIdentifiers:
+            algorithm: 'SHA256'
+            parameters: ''
+        contentInfo:
+          contentType: 'pkcs7-data'
+        certificates:
+          certificates:
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '4835703278459965212045240'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2015-12-08 11:00:00 UTC'
+                  notAfter: '2017-01-29 11:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium OCSP Responder'
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100af8e5f7eefa62c0036ac0fb62dca1700a1988be364bc2e6bb437bc8373980db5289b1f03bdb4bcb7cf8...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020780'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414eda3b5e32bd24a86598fc970f564f4eb005dc4a3'
+                    extension:
+                      extnId: 'extendedKeyUsage'
+                      value: '300a06082b060105050703'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'noCheck'
+                      value: '05'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: '46b5ae220d6b60e51a468d1bcd94e4ec51ce01d89a585847fc2a62e843f9067c41eec49ca7c8dfb8e07fc9f170a0ab4a789fc...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '4835703278459965212045240'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2015-12-08 11:00:00 UTC'
+                  notAfter: '2017-01-29 11:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium OCSP Responder'
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100af8e5f7eefa62c0036ac0fb62dca1700a1988be364bc2e6bb437bc8373980db5289b1f03bdb4bcb7cf8...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020780'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414eda3b5e32bd24a86598fc970f564f4eb005dc4a3'
+                    extension:
+                      extnId: 'extendedKeyUsage'
+                      value: '300a06082b060105050703'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'noCheck'
+                      value: '05'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: '46b5ae220d6b60e51a468d1bcd94e4ec51ce01d89a585847fc2a62e843f9067c41eec49ca7c8dfb8e07fc9f170a0ab4a789fc...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '4835703278459965212045240'
+                signature:
+                  algorithm: 'RSA-SHA1'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2015-12-08 11:00:00 UTC'
+                  notAfter: '2017-01-29 11:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium OCSP Responder'
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100af8e5f7eefa62c0036ac0fb62dca1700a1988be364bc2e6bb437bc8373980db5289b1f03bdb4bcb7cf8...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020780'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '0414eda3b5e32bd24a86598fc970f564f4eb005dc4a3'
+                    extension:
+                      extnId: 'extendedKeyUsage'
+                      value: '300a06082b060105050703'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'noCheck'
+                      value: '05'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA1'
+                parameters: ''
+              signature: '46b5ae220d6b60e51a468d1bcd94e4ec51ce01d89a585847fc2a62e843f9067c41eec49ca7c8dfb8e07fc9f170a0ab4a789fc...[1024]'
+          certificates:
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '5706940941790920504'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2013-06-26 12:00:00 UTC'
+                  notAfter: '2028-01-28 12:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a02820201009890aefac71e6f8ee0053ab323784cd1d62fdd753c5b18e84f5ebb0566979340593770f69da672610e6...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30030101ff'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '30393037060560380c0101302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e626...[118]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '041467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '25893cab51cba68fd8752112993482a5b76840c8d5b58dd918cfe7c9e7b3c33aab69b2f99fa199ae3feeab49b8438b527da5f...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '5706940941790920504'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2013-06-26 12:00:00 UTC'
+                  notAfter: '2028-01-28 12:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a02820201009890aefac71e6f8ee0053ab323784cd1d62fdd753c5b18e84f5ebb0566979340593770f69da672610e6...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30030101ff'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '30393037060560380c0101302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e626...[118]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '041467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '25893cab51cba68fd8752112993482a5b76840c8d5b58dd918cfe7c9e7b3c33aab69b2f99fa199ae3feeab49b8438b527da5f...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '5706940941790920504'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2013-06-26 12:00:00 UTC'
+                  notAfter: '2028-01-28 12:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a02820201009890aefac71e6f8ee0053ab323784cd1d62fdd753c5b18e84f5ebb0566979340593770f69da672610e6...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30030101ff'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '30393037060560380c0101302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e626...[118]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '041467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '25893cab51cba68fd8752112993482a5b76840c8d5b58dd918cfe7c9e7b3c33aab69b2f99fa199ae3feeab49b8438b527da5f...[1024]'
+          certificates:
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '64398789864240511723843119788779211061'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2015-11-25 10:00:00 UTC'
+                  notAfter: '2027-07-25 10:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100c4b1938e11eb81e3c30a00355612c642cd933266be85704e790a0931b43f95b7bf2eb56a0a6eb32a670...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30060101ff0201'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '303a3038060660380c010102302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e6...[120]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '04143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '302e302ca02aa0288626687474703a2f2f63726c2e6569642e62656c6769756d2e62652f62656c6769756d342e63726c'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '939c88158fcc00476c96a3fcefbcdc40597d5ed89c0171fa621b27727862cf88fbfca980adf4f591d5dbc215909f030a159ee...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '64398789864240511723843119788779211061'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2015-11-25 10:00:00 UTC'
+                  notAfter: '2027-07-25 10:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100c4b1938e11eb81e3c30a00355612c642cd933266be85704e790a0931b43f95b7bf2eb56a0a6eb32a670...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30060101ff0201'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '303a3038060660380c010102302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e6...[120]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '04143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '302e302ca02aa0288626687474703a2f2f63726c2e6569642e62656c6769756d2e62652f62656c6769756d342e63726c'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '939c88158fcc00476c96a3fcefbcdc40597d5ed89c0171fa621b27727862cf88fbfca980adf4f591d5dbc215909f030a159ee...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '64398789864240511723843119788779211061'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Belgium Root CA4'
+                validity:
+                  notBefore: '2015-11-25 10:00:00 UTC'
+                  notAfter: '2027-07-25 10:00:00 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082020a0282020100c4b1938e11eb81e3c30a00355612c642cd933266be85704e790a0931b43f95b7bf2eb56a0a6eb32a670...[1052]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020106'
+                    extension:
+                      extnId: 'basicConstraints'
+                      critical: 'true'
+                      value: '30060101ff0201'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '303a3038060660380c010102302e302c06082b060105050702011620687474703a2f2f7265706f7369746f72792e6569642e6...[120]'
+                    extension:
+                      extnId: 'subjectKeyIdentifier'
+                      value: '04143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '302e302ca02aa0288626687474703a2f2f63726c2e6569642e62656c6769756d2e62652f62656c6769756d342e63726c'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '03020007'
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '3016801467e8f14e4fb3b5f3076f089c0c83d97ad95be749'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: '939c88158fcc00476c96a3fcefbcdc40597d5ed89c0171fa621b27727862cf88fbfca980adf4f591d5dbc215909f030a159ee...[1024]'
+          certificates:
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '21267647932559816409577930826195679072'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2016-09-13 08:58:57 UTC'
+                  notAfter: '2026-09-09 23:59:59 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Eric Ambroise (Signature)'
+                  name:
+                    name:
+                      type: 'SN'
+                      value: 'Ambroise'
+                  name:
+                    name:
+                      type: 'GN'
+                      value: 'Eric Joseph'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '56030719318'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100c6d8df3f5968cf1fe6a03152e4b2b7bcf69d04e942c3b25b4422c6282c21418e95fca5aedf5c2d19dec...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'authorityInfoAccess'
+                      value: '3062303606082b06010505073002862a687474703a2f2f63657274732e6569642e62656c6769756d2e62652f62656c6769756...[200]'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '3082010b30820107060760380c010102013081fb302c06082b060105050702011620687474703a2f2f7265706f7369746f727...[542]'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '3030302ea02ca02a8628687474703a2f2f63726c2e6569642e62656c6769756d2e62652f656964633230313633302e63726c'
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020640'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '030205'
+                    extension:
+                      extnId: 'qcStatements'
+                      value: '30143008060604008e4601013008060604008e460104'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: 'a2b558b32fe23783f08a8f1b5ceed85904c0c8d3390709b47a0c90cc7330c196943b3ce8af254126dab31472608a7399bdbe1...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '21267647932559816409577930826195679072'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2016-09-13 08:58:57 UTC'
+                  notAfter: '2026-09-09 23:59:59 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Eric Ambroise (Signature)'
+                  name:
+                    name:
+                      type: 'SN'
+                      value: 'Ambroise'
+                  name:
+                    name:
+                      type: 'GN'
+                      value: 'Eric Joseph'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '56030719318'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100c6d8df3f5968cf1fe6a03152e4b2b7bcf69d04e942c3b25b4422c6282c21418e95fca5aedf5c2d19dec...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'authorityInfoAccess'
+                      value: '3062303606082b06010505073002862a687474703a2f2f63657274732e6569642e62656c6769756d2e62652f62656c6769756...[200]'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '3082010b30820107060760380c010102013081fb302c06082b060105050702011620687474703a2f2f7265706f7369746f727...[542]'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '3030302ea02ca02a8628687474703a2f2f63726c2e6569642e62656c6769756d2e62652f656964633230313633302e63726c'
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020640'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '030205'
+                    extension:
+                      extnId: 'qcStatements'
+                      value: '30143008060604008e4601013008060604008e460104'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: 'a2b558b32fe23783f08a8f1b5ceed85904c0c8d3390709b47a0c90cc7330c196943b3ce8af254126dab31472608a7399bdbe1...[1024]'
+            signedCertificate:
+              certificate:
+                version:
+                  version: '2'
+                serialNumer: '21267647932559816409577930826195679072'
+                signature:
+                  algorithm: 'RSA-SHA256'
+                  parameters: ''
+                issuer:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Citizen CA'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '201630'
+                validity:
+                  notBefore: '2016-09-13 08:58:57 UTC'
+                  notAfter: '2026-09-09 23:59:59 UTC'
+                subject:
+                  name:
+                    name:
+                      type: 'C'
+                      value: 'BE'
+                  name:
+                    name:
+                      type: 'CN'
+                      value: 'Eric Ambroise (Signature)'
+                  name:
+                    name:
+                      type: 'SN'
+                      value: 'Ambroise'
+                  name:
+                    name:
+                      type: 'GN'
+                      value: 'Eric Joseph'
+                  name:
+                    name:
+                      type: 'serialNumber'
+                      value: '56030719318'
+                subjectPublicKeyInfo:
+                  algorithm:
+                    algorithm: 'rsaEncryption'
+                    parameters: ''
+                  subjectPublicKey: '3082010a0282010100c6d8df3f5968cf1fe6a03152e4b2b7bcf69d04e942c3b25b4422c6282c21418e95fca5aedf5c2d19dec...[540]'
+                extensions:
+                  extensions:
+                    extension:
+                      extnId: 'authorityKeyIdentifier'
+                      value: '301680143925340adc2e8c9aea164e60431330d945aece99'
+                    extension:
+                      extnId: 'authorityInfoAccess'
+                      value: '3062303606082b06010505073002862a687474703a2f2f63657274732e6569642e62656c6769756d2e62652f62656c6769756...[200]'
+                    extension:
+                      extnId: 'certificatePolicies'
+                      value: '3082010b30820107060760380c010102013081fb302c06082b060105050702011620687474703a2f2f7265706f7369746f727...[542]'
+                    extension:
+                      extnId: 'crlDistributionPoints'
+                      value: '3030302ea02ca02a8628687474703a2f2f63726c2e6569642e62656c6769756d2e62652f656964633230313633302e63726c'
+                    extension:
+                      extnId: 'keyUsage'
+                      critical: 'true'
+                      value: '03020640'
+                    extension:
+                      extnId: 'nsCertType'
+                      value: '030205'
+                    extension:
+                      extnId: 'qcStatements'
+                      value: '30143008060604008e4601013008060604008e460104'
+              signatureAlgorithmIdentifier:
+                algorithm: 'RSA-SHA256'
+                parameters: ''
+              signature: 'a2b558b32fe23783f08a8f1b5ceed85904c0c8d3390709b47a0c90cc7330c196943b3ce8af254126dab31472608a7399bdbe1...[1024]'
+        signersInfo:
+          signersInfo:
+            version: '1'
+            signerIdentifier:
+              issuer:
+                name:
+                  name:
+                    type: 'C'
+                    value: 'BE'
+                name:
+                  name:
+                    type: 'CN'
+                    value: 'Citizen CA'
+                name:
+                  name:
+                    type: 'serialNumber'
+                    value: '201630'
+              serialNumber: '21267647932559816409577930826195679072'
+            digestAlgorithms:
+              algorithm: 'SHA256'
+              parameters: ''
+            authenticatedAttributes:
+              attribute:
+                type: 'contentType'
+                undefined:
+                  any: 'pkcs7-data'
+              attribute:
+                type: 'messageDigest'
+                undefined:
+                  any: '04d4948583ea5458e1036a39df57f293c79ff1dc96639bae4b519775cc312407'
+              attribute:
+                type: '1.2.840.113583.1.1.8'
+                1.2.840.113583.1.1.8:
+                  revocationInfoArchivals:
+                    crls:
+                      crls:
+                        signedCRL:
+                          crl:
+                            signature:
+                              algorithm: 'RSA-SHA1'
+                              parameters: ''
+                            issuer:
+                              name:
+                                name:
+                                  type: 'C'
+                                  value: 'BE'
+                              name:
+                                name:
+                                  type: 'CN'
+                                  value: 'Belgium Root CA4'
+                            thisUpdate: '2016-07-01 11:00:00 UTC'
+                            nextUpdate: '2017-01-31 11:00:00 UTC'
+                          signatureAlgorithmIdentifier:
+                            algorithm: 'RSA-SHA1'
+                            parameters: ''
+                          signature: '8743b870dbbcde5756707623d7a4182dfc647242e841fbad47bd4d5b0a0d1a36791b7d6a74a12e97c24a426f32f532b12b726...[1024]'
+                    ocsp:
+                      ocsp:
+                        OCSPResponses:
+                          responseStatus: '0'
+                          responseBytes:
+                            responseBytes:
+                              responseType: 'basicOCSPResponse'
+                              response: '308211d23081dda130302e311f301d0603550403131642656c6769756d204f43535020526573706f6e646572310b300906035...[9132]'
+            digestEncryptionAlgorithm:
+              algorithm: 'RSA-SHA256'
+              parameters: ''
+            encryptedDigest: 'ab1447c1e16b49c84d6298c036714e705273a2e457b7110383b103c9a06fa566cd0447b86bc1b4975adc3b2b48d3a29c007eb...[512]'
+            unauthenticatedAttributes:
+              attribute:
+                type: 'id-smime-aa-timeStampToken'
+                id-smime-aa-timeStampToken:
+                  attribute:
+                    type: 'pkcs7-signedData'
+                    pkcs7-signedData:
+                      signedData:
+                        version: '3'
+                        digestAlgorithms:
+                          digestAlgorithmIdentifiers:
+                            algorithm: 'SHA256'
+                            parameters: ''
+                        contentInfo:
+                          contentType: 'id-smime-ct-TSTInfo'
+                          undefined:
+                            any: '3081d0020101060a2b0601040182e56201013031300d060960864801650304020105000420514c641ec55f844eacff30cbb1d...[422]'
+                        certificates:
+                          certificates:
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '8'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-07-09 07:48:44 UTC'
+                                  notAfter: '2018-07-07 07:48:44 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Time Stamp Authority Server'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082010a0282010100ab2fa3cd569372e919ae685f25bc26e029a90ed29846a45832f9b9f1fcb191f18eeb3e4dc2d5000eddf...[540]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      value: '0'
+                                    extension:
+                                      extnId: 'extendedKeyUsage'
+                                      critical: 'true'
+                                      value: '300a06082b06010505070308'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1620536166652043726561746976652054696d65205374616d702053657276696365'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '0414c992e49ca0077e17123d70a2b97070150dc50734'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '301a811870726f6a656374407361666563726561746976652e6f7267'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: '39821032a3e035a9ebca97c1f3a7dc6ca9fc9febd93fe950d2e0916d8222e9ef264f7533b831d723a0d62663651b91f02195c...[1024]'
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '8'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-07-09 07:48:44 UTC'
+                                  notAfter: '2018-07-07 07:48:44 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Time Stamp Authority Server'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082010a0282010100ab2fa3cd569372e919ae685f25bc26e029a90ed29846a45832f9b9f1fcb191f18eeb3e4dc2d5000eddf...[540]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      value: '0'
+                                    extension:
+                                      extnId: 'extendedKeyUsage'
+                                      critical: 'true'
+                                      value: '300a06082b06010505070308'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1620536166652043726561746976652054696d65205374616d702053657276696365'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '0414c992e49ca0077e17123d70a2b97070150dc50734'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '301a811870726f6a656374407361666563726561746976652e6f7267'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: '39821032a3e035a9ebca97c1f3a7dc6ca9fc9febd93fe950d2e0916d8222e9ef264f7533b831d723a0d62663651b91f02195c...[1024]'
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '8'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-07-09 07:48:44 UTC'
+                                  notAfter: '2018-07-07 07:48:44 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Time Stamp Authority Server'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082010a0282010100ab2fa3cd569372e919ae685f25bc26e029a90ed29846a45832f9b9f1fcb191f18eeb3e4dc2d5000eddf...[540]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      value: '0'
+                                    extension:
+                                      extnId: 'extendedKeyUsage'
+                                      critical: 'true'
+                                      value: '300a06082b06010505070308'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1620536166652043726561746976652054696d65205374616d702053657276696365'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '0414c992e49ca0077e17123d70a2b97070150dc50734'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '301a811870726f6a656374407361666563726561746976652e6f7267'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: '39821032a3e035a9ebca97c1f3a7dc6ca9fc9febd93fe950d2e0916d8222e9ef264f7533b831d723a0d62663651b91f02195c...[1024]'
+                          certificates:
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '11168849526096933696'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-04-29 21:40:47 UTC'
+                                  notAfter: '2038-04-22 21:40:47 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082020a0282020100c0b0990c176ab5026bbfef4f6345618c617249a8b6c0d9a0092e4f38fe0b4bb357211f2621dfde0881b...[1052]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      critical: 'true'
+                                      value: '30030101ff'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '04148218588030285c440a477b52b5e92682d327eecc'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'keyUsage'
+                                      value: '03020106'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCertType'
+                                      value: '03020007'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1631536166652043726561746976652043657274696669636174696f6e20417574686f7269747920436572746966696361746...[102]'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: 'b1f4c10c6f282f901187eeaba8390d8febbcbd3f9fca541b99d936792986ca471c1e67d77fce3080b4f14269cf6d0d0f33d4b...[1024]'
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '11168849526096933696'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-04-29 21:40:47 UTC'
+                                  notAfter: '2038-04-22 21:40:47 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082020a0282020100c0b0990c176ab5026bbfef4f6345618c617249a8b6c0d9a0092e4f38fe0b4bb357211f2621dfde0881b...[1052]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      critical: 'true'
+                                      value: '30030101ff'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '04148218588030285c440a477b52b5e92682d327eecc'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'keyUsage'
+                                      value: '03020106'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCertType'
+                                      value: '03020007'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1631536166652043726561746976652043657274696669636174696f6e20417574686f7269747920436572746966696361746...[102]'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: 'b1f4c10c6f282f901187eeaba8390d8febbcbd3f9fca541b99d936792986ca471c1e67d77fce3080b4f14269cf6d0d0f33d4b...[1024]'
+                            signedCertificate:
+                              certificate:
+                                version:
+                                  version: '2'
+                                serialNumer: '11168849526096933696'
+                                signature:
+                                  algorithm: 'RSA-SHA1'
+                                  parameters: ''
+                                issuer:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                validity:
+                                  notBefore: '2008-04-29 21:40:47 UTC'
+                                  notAfter: '2038-04-22 21:40:47 UTC'
+                                subject:
+                                  name:
+                                    name:
+                                      type: 'C'
+                                      value: 'ES'
+                                  name:
+                                    name:
+                                      type: 'O'
+                                      value: 'Safe Creative'
+                                  name:
+                                    name:
+                                      type: 'OU'
+                                      value: 'Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'CN'
+                                      value: 'Safe Creative Primary Certification Authority'
+                                  name:
+                                    name:
+                                      type: 'emailAddress'
+                                      value: 'pki@safecreative.com'
+                                subjectPublicKeyInfo:
+                                  algorithm:
+                                    algorithm: 'rsaEncryption'
+                                    parameters: ''
+                                  subjectPublicKey: '3082020a0282020100c0b0990c176ab5026bbfef4f6345618c617249a8b6c0d9a0092e4f38fe0b4bb357211f2621dfde0881b...[1052]'
+                                extensions:
+                                  extensions:
+                                    extension:
+                                      extnId: 'basicConstraints'
+                                      critical: 'true'
+                                      value: '30030101ff'
+                                    extension:
+                                      extnId: 'subjectKeyIdentifier'
+                                      value: '04148218588030285c440a477b52b5e92682d327eecc'
+                                    extension:
+                                      extnId: 'authorityKeyIdentifier'
+                                      value: '3081ce80148218588030285c440a477b52b5e92682d327eecca181aaa481a73081a4310b30090603550406130245533116301...[418]'
+                                    extension:
+                                      extnId: 'keyUsage'
+                                      value: '03020106'
+                                    extension:
+                                      extnId: 'subjectAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'issuerAltName'
+                                      value: '30168114706b69407361666563726561746976652e636f6d'
+                                    extension:
+                                      extnId: 'nsCertType'
+                                      value: '03020007'
+                                    extension:
+                                      extnId: 'nsComment'
+                                      value: '1631536166652043726561746976652043657274696669636174696f6e20417574686f7269747920436572746966696361746...[102]'
+                                    extension:
+                                      extnId: 'crlDistributionPoints'
+                                      value: '30353033a031a02f862d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726...[110]'
+                                    extension:
+                                      extnId: 'nsCaRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                                    extension:
+                                      extnId: 'nsRevocationUrl'
+                                      value: '162d687474703a2f2f706b692e7361666563726561746976652e636f6d2f7075622f63726c2f636163726c2e63726c'
+                              signatureAlgorithmIdentifier:
+                                algorithm: 'RSA-SHA1'
+                                parameters: ''
+                              signature: 'b1f4c10c6f282f901187eeaba8390d8febbcbd3f9fca541b99d936792986ca471c1e67d77fce3080b4f14269cf6d0d0f33d4b...[1024]'
+                        signersInfo:
+                          signersInfo:
+                            version: '1'
+                            signerIdentifier:
+                              issuer:
+                                name:
+                                  name:
+                                    type: 'C'
+                                    value: 'ES'
+                                name:
+                                  name:
+                                    type: 'O'
+                                    value: 'Safe Creative'
+                                name:
+                                  name:
+                                    type: 'OU'
+                                    value: 'Certification Authority'
+                                name:
+                                  name:
+                                    type: 'CN'
+                                    value: 'Safe Creative Primary Certification Authority'
+                                name:
+                                  name:
+                                    type: 'emailAddress'
+                                    value: 'pki@safecreative.com'
+                              serialNumber: '8'
+                            digestAlgorithms:
+                              algorithm: 'SHA256'
+                              parameters: ''
+                            authenticatedAttributes:
+                              attribute:
+                                type: 'contentType'
+                                undefined:
+                                  any: 'id-smime-ct-TSTInfo'
+                              attribute:
+                                type: 'signingTime'
+                                undefined:
+                                  any: '2016-10-05 15:10:12 UTC'
+                              attribute:
+                                type: 'id-smime-aa-signingCertificate'
+                                id-smime-aa-signingCertificate:
+                                  signingCertificate:
+                                    certs:
+                                      ESSCertID:
+                                        certHash: '74e2e9641b9b1e8177516dbd9140f2def85f00fc'
+                              attribute:
+                                type: 'messageDigest'
+                                undefined:
+                                  any: '907f22b794c2c5b42295ece94ad3b59a57bfb1eff2200886a9d41258927442b2'
+                            digestEncryptionAlgorithm:
+                              algorithm: 'rsaEncryption'
+                              parameters: ''
+                            encryptedDigest: '78a71a821db1257632c5872cef3d468a7c8a93d5b860edf8c6da642f85fba76846485aa429c9a273373e1e636ed661b89f3b0...[512]'

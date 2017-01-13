@@ -10,7 +10,7 @@ class PKCS7Builder
     def initialize
         @root = PKCS7Root.new
         @root.name = 'PKCS7'
-        Debug.instance.turn_on
+        Debug.instance.turn_off
     end
 
     def parse(der)

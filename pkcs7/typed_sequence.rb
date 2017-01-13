@@ -1,6 +1,5 @@
 require 'pp'
 require_relative 'sequence'
-# Dir[File.join(File.dirname(__FILE__), '*.rb')].each {|file| require file }
 
 
 class TypedSequence < Sequence
@@ -18,16 +17,19 @@ class TypedSequence < Sequence
     end
 
     def instance_for_tag(tag, level)
-        if tag.to_sym == :C0
-            raise "Uninitialised contentType for #{self.class} at level #{level}" unless @identifier
+        unless tag.to_sym == :U6
+            raise "Uninitialised typed sequence for #{self.class} at level #{level}" unless @identifier
             type = @identifier.value.to_s
             class_name = self.class::DATA_TYPES[type]
             if class_name
-                Child.instantiate({name: @identifier.value, class_name: class_name}).node
+                child_node = Child.instantiate({name: type, class_name: class_name}).node
             else
-                super(tag, level) # For the mment, let's have a default value....
-                # raise "Invalid code '#{type} in #{self.class} for level #{level}, identifier is #{type}" unless class_name
+                child_node = Child.instantiate({name: 'undefined', class_name: 'AnyNode'}).node # For the time being, let's create an 'any' instead of an exception
+                # raise "Invalid code #{type} in #{self.class} for level #{level}, identifier is #{type}" unless class_name
             end
+            child_node.level = level
+            child_node.tag = tag
+            child_node
         else
             super(tag, level)
         end
