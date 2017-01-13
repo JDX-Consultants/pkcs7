@@ -8,6 +8,7 @@ include Origami
 doc = Origami::PDF.read './arbressignandTSA.pdf'
 # doc = Origami::PDF.read './signed.pdf'
 
-PKCS7Builder.instance.parse(doc.signature.to_hash[:Contents].strip)
+builder = PKCS7Builder.new('ContentInfo', 'contentInfo')
+builder.parse(doc.signature.to_hash[:Contents].strip)
 
-PKCS7Builder.instance.dump
+builder.dump
