@@ -1,9 +1,11 @@
+# Dir[File.join(File.dirname(__FILE__), '*.rb')].each {|file| require file }
+
 class Node
 
-    attr_accessor :name, :value, :instances, :level
+    attr_accessor :name, :value, :instances, :level, :tag
 
     def <<(object)
-        Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name}:"
+        Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name} (#{object.tag}):"
         raise "Invalid object, expecing a node and received a '#{object.class}' with content #{object.inspect}" unless object.is_a? Node
         @instances ||= [] # Lazy instantiation (and no need for initializer), as some objects are leaves
         @instances << object
@@ -17,8 +19,9 @@ class Node
                 new_node = instance_for_tag(tag, level + 1)
                 raise "Could not create node in #{self.class} for tag #{tag}" unless new_node
                 new_node.level = level
+                new_node.tag = tag
                 self << new_node
-                if new_node.is_a? ImplicitSequence # Horrible trick, if an implicit sequence, pass the whole baby (to avoid 'eating a level')
+                if new_node.is_a? ImplicitSequence # Horrible trick, if an implicit sequence or choice, pass the whole baby (to avoid 'eating a level')
                     new_node.parse_element asn_element, level + 1
                 else
                     new_node.parse_element asn_child_element, level + 1
@@ -36,12 +39,15 @@ class Node
 
     # This class is defined to allow for overwritting
     def node_tag
-        eval "#{self.class}::TAG"
+        begin
+            eval "#{self.class}::TAG"
+        rescue => e
+            raise "Tag could not be defined in class #{self.class}: #{e.message}"
+        end
     end
 
     def value=(value)
         @value = value.to_s
-        Debug.instance.show " #{display_value}"
     end
 
     # Should be overwritten by composite nodes (sequence, set, sequence of, set of, implicit sequence, ...) and never invoked for leaf nodes
@@ -63,7 +69,7 @@ class Node
         return '---' unless @value
         value = @value.strip
         value = value.ascii_only? ? value : value.unpack('H*').first
-        value = value.size > 100 ? "#{value[0..100]}..." : value
+        value = value.size > 100 ? "#{value[0..100]}...[#{value.size}]" : value
         value
     end
 

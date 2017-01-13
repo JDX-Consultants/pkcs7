@@ -1,6 +1,6 @@
-require_relative 'set_of'
+require_relative 'sequence_of'
 
-class Attributes < SetOf
+class Attributes < SequenceOf
 
     CHILD = { name: 'attribute', class_name: 'Attribute' }
 

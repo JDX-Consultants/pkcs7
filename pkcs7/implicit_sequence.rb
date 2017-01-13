@@ -7,7 +7,6 @@ require 'pp'
 class ImplicitSequence < Sequence
 
     def initialize
-        # puts "\nImplicit sequence initialized, children= #{self.class::CHILDREN} by #{caller.first}"
         @position = 0
         raise "No class defined in #{self.class}" unless self.class::CHILDREN
         @children = self.class::CHILDREN.collect { |child_map| Child.instantiate(child_map)}

@@ -1,14 +1,12 @@
-# Dir[File.join(File.dirname(__FILE__), '*.rb')].each {|file| require file }
+Dir[File.join(File.dirname(__FILE__), '*.rb')].each {|file| require file }
 
 class Child
-
 
     def self.instantiate(in_params)
         params = in_params.clone
         name = (params.delete(:name))
         class_name = (params.delete(:class_name))
         raise "Missing name and class name" unless name and class_name
-        # puts "Creating child with params #{in_params}"
         self.new(name, class_name, params)
     end
 
@@ -55,20 +53,6 @@ class Child
             input_tag.to_sym == child_tag.to_sym
         end
     end
-
-    # def create_child()
-    #     if @options[:context_specific]  and not @options[:implicit] # Create artificial class, for 'skipping' a level
-    #         return ContextSpecificNode.new(self)
-    #     else # Normal case
-    #         begin
-    #             node = eval "#{@class_name}.new"
-    #             node.name = @name
-    #             node
-    #         rescue => e
-    #             raise "Cannot create child '#{@class_name}' : #{e.message.strip}"
-    #         end
-    #     end
-    # end
 
     def to_s
         "#{name}: #{class_name}#{@options.size > 0 ? (', ' + @options.inspect) : ''}, tag: #{tag}"

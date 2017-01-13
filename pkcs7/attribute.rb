@@ -1,9 +1,15 @@
-require_relative 'sequence'
+require_relative 'typed_sequence'
 
-class Attribute < Sequence
+class Attribute < TypedSequence
+
+    DATA_TYPES = {
+        '1.2.840.113583.1.1.8' => 'RevocationInfoArchivals',
+        'id-smime-aa-timeStampToken' => 'ContentInfo',        
+    }
+
 
     CHILDREN = [
-        { name: 'type', class_name: 'Node' },
+        { name: 'type', class_name: 'OIDNode' },
         { name: 'value', class_name: 'AnyNode' },
     ]
 

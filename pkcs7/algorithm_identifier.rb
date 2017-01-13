@@ -1,6 +1,4 @@
 require_relative 'sequence'
-require_relative 'any_node'
-require_relative 'child'
 
 
 class AlgorithmIdentifier < Sequence

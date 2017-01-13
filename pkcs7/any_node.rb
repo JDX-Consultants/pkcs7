@@ -4,9 +4,9 @@ class AnyNode < Node
 
     TAG = :ANY
 
-    # def instance_for_tag(child, level)
-    #     create_child({ name: 'any', class_name: 'AnyNode'))
-    # end
+    def instance_for_tag(child, level)
+        Child.instantiate({ name: 'any', class_name: 'AnyNode'}).node
+    end
 
 
 end

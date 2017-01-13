@@ -1,0 +1,3 @@
+class OCSPResponseStatus < EnumNode
+
+end

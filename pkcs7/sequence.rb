@@ -6,9 +6,8 @@ class Sequence < Node
 
     def initialize
         @position = 0
-        children = self.class::CHILDREN
-        raise "No class defined in #{self.class}" unless children
-        @children = children.collect { |child_map| Child.instantiate(child_map)}
+        raise "No class defined in #{self.class}" unless self.class::CHILDREN
+        @children = self.class::CHILDREN.collect { |child_map| Child.instantiate(child_map)}
     end
 
     def instance_for_tag(tag, level)
