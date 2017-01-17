@@ -2,7 +2,7 @@
 
 class Node
 
-    attr_accessor :name, :value, :instances, :level, :tag
+    attr_accessor :name, :value, :instances, :level, :tag, :dump_value
 
     def <<(object)
         Debug.instance.show "\n#{''.ljust(object.level * 4)}#{object.name}_#{object.tag}:"
@@ -20,15 +20,15 @@ class Node
                 raise "Could not create node in #{self.class} for tag #{tag}" unless new_node
                 new_node.level = level
                 new_node.tag = tag
-                self << new_node
                 if new_node.is_a? ImplicitSequence # Horrible trick, if an implicit sequence or choice, pass the whole baby (to avoid 'eating a level')
                     new_node.parse_element asn_element, level + 1
                 else
                     new_node.parse_element asn_child_element, level + 1
                 end
+                self << new_node
             end
         else
-            @value = asn_element.value.to_s.strip
+            @value ||= asn_element.value.to_s.strip
             Debug.instance.show " #{display_value}"
         end
     end
@@ -51,17 +51,19 @@ class Node
         raise "Instance for tag called on leaf node #{self.class} with tag #{tag} and level #{level}"
     end
 
-    def dump(indent)
+    def dump(out, indent)
         dump_name = @name ? @name.gsub('-.', '__') : '---'
         if @instances and @instances.size > 0
-            puts "#{''.ljust(indent * 2)}#{dump_name.strip}:"
-            @instances.each { |element| element.dump(indent + 1) }
+            out << "\n#{''.ljust(indent * 2)}#{dump_name.strip}:"
+            @instances.each { |element| element.dump(out, indent + 1) }
         else
-            puts "#{''.ljust(indent * 2)}#{dump_name}: #{display_value}"
+            out << "\n#{''.ljust(indent * 2)}#{dump_name}: #{display_value}"
         end
+        out
     end
 
     def display_value()
+        return @dump_value if @dump_value
         return '---' unless @value
         value = @value.strip
         value = is_ascii?(value) ? value : value.unpack('H*').first
@@ -70,7 +72,7 @@ class Node
     end
 
     def is_ascii?(s)
-        s.each_byte { |b| return false if b != 16 and (b < 32 or b > 127) }
+        s.each_byte { |b| return false if b != 16 and (b < 20 or b > 127) }
         true
     end
 

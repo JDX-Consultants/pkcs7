@@ -12,8 +12,8 @@ class PKCS7Builder
         @root.parse_element(OpenSSL::ASN1.decode(der), 0)
     end
 
-    def dump(level = 0)
-        @root.dump(level)
+    def dump(out, level = 0)
+        @root.dump(out, level)
     end
 
 end

@@ -11,4 +11,6 @@ doc = Origami::PDF.read './arbressignandTSA.pdf'
 builder = PKCS7Builder.new('ContentInfo', 'contentInfo')
 builder.parse(doc.signature.to_hash[:Contents].strip)
 
-builder.dump
+out = "DUMP:\n"
+builder.dump(out)
+puts out

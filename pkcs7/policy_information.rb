@@ -1,6 +1,7 @@
-class PolicyInformation < AnyNode
+class PolicyInformation < Sequence
 
-# TODO
-
-
+    CHILDREN = [
+        { name: 'policyIdentifier', class_name: 'OIDNode' },
+        { name: 'policyQualifiers', class_name: 'PolicyQualifierInfos' },
+    ]
 end
