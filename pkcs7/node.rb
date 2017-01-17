@@ -46,6 +46,12 @@ class Node
         end
     end
 
+    def instance_with_tag(tag)
+        @instances.each { |instance| return instance if instance.tag == tag}
+        raise "Extension: tag #{tag} not found in instances #{@instances}"
+    end
+
+
     # Should be overwritten by composite nodes (sequence, set, sequence of, set of, implicit sequence, ...) and never invoked for leaf nodes
     def instance_for_tag(tag, level)
         raise "Instance for tag called on leaf node #{self.class} with tag #{tag} and level #{level}"

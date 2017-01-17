@@ -31,11 +31,6 @@ class Extension < Sequence
         super(out, indent)
     end
 
-    def instance_with_tag(tag)
-        @instances.each { |instance| return instance if instance.tag == tag}
-        raise "Extension: tag #{tag} not found in instances #{@instances}"
-    end
-
 end
 
 
