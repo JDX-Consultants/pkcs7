@@ -11,7 +11,7 @@ class SetNode < Node
         # TODO: could be improved in a single line I guess...  Ruby explaration
         @children = {}
         children.each do |child|
-            tag = child.tag
+            tag child.tag
             raise "No TAG defined for node #{child}" unless tag
             @children[tag] = child
         end
@@ -22,7 +22,7 @@ class SetNode < Node
         if child
             child_node =  child.node
             child_node.level = level
-            child_node.tag = tag
+            child_node.tag tag
             child_node
         else
             raise "Invalid tag received for node #{self.class}, received #{tag} at #{level}, while expecting #{@children}"

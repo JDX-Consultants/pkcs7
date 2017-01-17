@@ -70,7 +70,7 @@ class Node
     end
 
     def is_ascii?(s)
-        s.each_byte { |b| return false if b < 32 or b > 127}
+        s.each_byte { |b| return false if b != 16 and (b < 32 or b > 127) }
         true
     end
 

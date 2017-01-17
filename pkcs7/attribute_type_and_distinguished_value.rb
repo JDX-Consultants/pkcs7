@@ -5,6 +5,7 @@ class AttributeTypeAndDistinguishedValue < Sequence
     CHILDREN = [
         { name: 'type', class_name: 'AnyNode' },
         { name: 'value', class_name: 'AnyNode' },
+        { name: 'primaryDistinguished', class_name: 'BooleanNode' },
     ]
 
 end

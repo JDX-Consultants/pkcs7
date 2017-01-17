@@ -2,7 +2,7 @@ require_relative 'choice_node'
 
 class CertificateChoice < ChoiceNode
 
-    TAG = [Certificate::TAG, :C0, :C1]
+    # tag [Certificate::TAG, :C0, :C1]
 
     CHOICE = [
         { name: 'certificate', class_name: 'Certificate' },
